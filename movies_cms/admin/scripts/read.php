@@ -28,10 +28,9 @@ function getSingleMovie($tbl, $col, $id){
         return 'There was a problem accessing this info';
     }
 
-}
+};
 
-function getMoviesByFilter($args)
-{
+function getMoviesByFilter($args){
     $pdo = Database::getInstance()->getConnection();
 
     $filterQuery = 'SELECT * FROM ' . $args['tbl'] . ' AS t, ' . $args['tbl2'] . ' AS t2, ' . $args['tbl3'] . ' AS t3';
@@ -49,4 +48,4 @@ function getMoviesByFilter($args)
     } else {
         return 'There was a problem accessing this info';
     }
-}
+};
